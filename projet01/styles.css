@@ -14,7 +14,6 @@
 .time-select,
 .sound-picker {
   height: 80%;
-  flex: 1;
 }
 
 .time-select {
