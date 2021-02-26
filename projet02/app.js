@@ -3,20 +3,22 @@ const list = document.querySelector(".todo-list");
 
 document.querySelector(".todo-submit").addEventListener("click", (e) => {
   e.preventDefault();
-  const div = document.createElement("div");
-  div.setAttribute("class","todo-item");  
-  div.innerHTML = "<li onblur='blurFunction(event)'>" + txt.value + "</li><button class='button todo-edit' onclick='editFunction(event)'>Edit</button><button onclick='deleteItem(event)' class='button todo-delete'>X</button>";
-  list.appendChild(div);
-  txt.value = "";
+  list.innerHTML += "<div class='todo-item'><li onblur='blurFunction(event)'>" + txt.value + "</li><button class='button todo-edit' onclick='editFunction(event)'>Edit</button><button class='button todo-delete' onclick='deleteFunction(event)'>X</button></div>";
+  txt.value = ""; 
   back();
 })
 
-function deleteItem(event) {
-  event.target.parentElement.remove(); 
+function deleteFunction(event) {
+  event.target.parentElement.classList.toggle("todo-anim");
+  event.target.parentElement.addEventListener("transitionend", deleteItem); 
   back();
 }
 
-function editFunction(event) {
+function deleteItem(){
+  this.remove();
+}
+
+function editFunction(event){
   event.target.previousSibling.setAttribute("contenteditable","true");
   event.target.previousSibling.focus();
   back();
