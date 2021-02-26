@@ -50,6 +50,7 @@ li {
   color: white;
   &:focus {
     outline: none;
+    -webkit-appearance : none;
   }
 }
 
