@@ -15,7 +15,12 @@
 }
 
 h1 {
-  color: var(--blue);
+    margin-top: em;
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 1em;
 }
 
 li {
