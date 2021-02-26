@@ -25,7 +25,6 @@ h1 {
 li {
   list-style: none;
   flex: 1;
-  z-index: -1;
   border: 1px solid var(--blue);
 }
 
@@ -62,7 +61,6 @@ ul {
   width: 5em;
   font-weight: 900;
   font-size: 1em;
-  -webkit-appearance : none;
 }
 
 .todo-list {
@@ -85,4 +83,10 @@ ul {
 
 .todo-delete {
   background: #EE4266;
+}
+
+.todo-anim {
+  transition: transform .6s;
+  transform: translate(0px, 4em) rotate(10deg);
+  opacity: .1;
 }
