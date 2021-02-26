@@ -15,7 +15,6 @@
 }
 
 h1 {
-    margin-top: em;
     color: var(--blue);
     display: flex;
     justify-content: center;
