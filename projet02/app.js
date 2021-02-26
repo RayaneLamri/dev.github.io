@@ -1,6 +1,5 @@
 const txt = document.querySelector(".todo-text");
 const list = document.querySelector(".todo-list");
-let keys = Object.keys(localStorage);
 
 document.querySelector(".todo-submit").addEventListener("click", (e) => {
   e.preventDefault();
@@ -32,14 +31,15 @@ function blurFunction(event) {
 }
 
 function back() {
+  let keys = Object.keys(localStorage);
   //if(keys.length !== 0){    
   for (let key of keys) {
-    const div = document.createElement("div");
-    div.setAttribute("data-num",key);
-    div.setAttribute("class","todo-item");  
-    div.innerHTML += "<li onblur='blurFunction(event)'>" + localStorage[key] + "</li><button class='button todo-edit' onclick='editFunction(event)'>Edit</button><button onclick='deleteItem(event)' class='button todo-delete'>X</button>";
-    list.appendChild(div);
-  }
+    const div2 = document.createElement("div");
+    div2.setAttribute("data-num",key);
+    div2.setAttribute("class","todo-item");  
+    div2.innerHTML += "<li onblur='blurFunction(event)'>" + localStorage[key] + "</li><button class='button todo-edit' onclick='editFunction(event)'>Edit</button><button onclick='deleteItem(event)' class='button todo-delete'>X</button>";
+    list.insertBefore(div2, list.firstChild);
+  };
 };
 //};
 
