@@ -14,6 +14,11 @@
   border: none;
 }
 
+h2 {
+  margin:0 auto;
+  color: var(--blue);
+}
+
 li {
   list-style: none;
   flex: 1;
