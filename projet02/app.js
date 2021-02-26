@@ -6,15 +6,13 @@ document.querySelector(".todo-submit").addEventListener("click", (e) => {
   const div = document.createElement("div");
   div.setAttribute("class","todo-item");  
   div.innerHTML = "<li onblur='blurFunction(event)'>" + txt.value + "</li><button class='button todo-edit' onclick='editFunction(event)'>Edit</button><button onclick='deleteItem(event)' class='button todo-delete'>X</button>";
-  list.insertBefore(div, list.firstChild);  
+  list.appendChild(div);
   txt.value = "";
   back();
-});
+})
 
 function deleteItem(event) {
-  if(event.target.className == "button todo-delete") {
-    event.target.parentElement.remove();
-  } 
+  event.target.parentElement.remove(); 
   back();
 }
 
@@ -31,10 +29,12 @@ function blurFunction(event) {
 
 function back() {
   localStorage.toDolist = list.innerHTML;
-};
+}
 
 function reload() {
-  localStorage.toDolist !== undefined ? list.innerHTML = localStorage.toDolist : alert("!");
+  if(localStorage.toDolist !== undefined) {
+    list.innerHTML = localStorage.toDolist;
+  }
 }
 
 reload();
