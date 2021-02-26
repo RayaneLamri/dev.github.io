@@ -50,7 +50,6 @@ li {
   color: white;
   &:focus {
     outline: none;
-    -webkit-appearance : none;
   }
 }
 
@@ -58,6 +57,7 @@ li {
   width: 5em;
   font-weight: 900;
   font-size: 1em;
+  -webkit-appearance : none;
 }
 
 .todo-list {
