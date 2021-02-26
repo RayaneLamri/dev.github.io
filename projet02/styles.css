@@ -26,10 +26,15 @@ li {
   list-style: none;
   flex: 1;
   z-index: -1;
+  border: 1px solid var(--blue);
 }
 
-.todo-form,
-.todo-container {
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.todo-form, .todo-container {
   display: flex;
   justify-content: center;
   position: relative;
@@ -37,19 +42,19 @@ li {
 }
 
 .todo-text {
-  border: 0.1em solid var(--blue);
+  border: .1em solid var(--blue);
   width: 13em;
-  padding: 0.4em;
-  &:focus {
-    outline: none;
+  padding:.4em;
+  &:focus{
+    outline: none;   
   }
 }
 
 .button {
   background: var(--blue);
   color: white;
-  &:focus {
-    outline: none;
+  &:focus{
+    outline: none;   
   }
 }
 
@@ -57,7 +62,6 @@ li {
   width: 5em;
   font-weight: 900;
   font-size: 1em;
-  -webkit-appearance : none;
 }
 
 .todo-list {
@@ -68,18 +72,16 @@ li {
 .todo-item {
   display: flex;
   justify-content: space-between;
-  border: 1px solid var(--blue);
   width: 15.9em;
 }
 
-.todo-edit,
-.todo-delete {
+.todo-edit, .todo-delete {
   width: 3em;
   font-weight: 600;
-  font-size: 0.9em;
-  padding: 0.1em;
+  font-size: .9em;
+  padding: .1em;
 }
 
 .todo-delete {
-  background: #ee4266;
+  background: #EE4266;
 }
