@@ -11,11 +11,11 @@ document.querySelector(".todo-submit").addEventListener("click", (e) => {
 function deleteFunction(event) {
   event.target.parentElement.classList.toggle("todo-anim");
   event.target.parentElement.addEventListener("transitionend", deleteItem); 
-  back();
 }
 
 function deleteItem(){
   this.remove();
+  back();
 }
 
 function editFunction(event){
