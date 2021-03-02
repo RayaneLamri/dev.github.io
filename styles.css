@@ -1,0 +1,100 @@
+@import url("https://use.typekit.net/qhs6ngj.css");
+
+:root {
+  --black: #0b0a07;
+  --blue: #f8f8f8;
+  --white: #0050f5;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: code-saver, sans-serif;
+  background-color: var(--blue);
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template:
+    ". . ." 1em
+    ". header ." auto
+    ". nav ." auto
+    ". article ." 1fr
+    "footer footer footer" auto
+    / 7em 1fr 7em;
+  justify-items: center;
+  align-items: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  grid-area: nav;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+a {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+nav a:hover {
+  font-weight: 900;
+}
+
+h1 {
+  grid-area: header;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 3em;
+}
+hr {
+  border: 2px solid var(--white);
+}
+.article {
+  grid-area: article;
+}
+
+footer {
+  grid-area: footer;
+}
+#cv {
+  color: var(--blue);
+  background-color: var(--white);
+}
+.button {
+  color: var(--blue);
+  background-color: var(--white);
+  font-size: 1.5em;
+  padding: 0.5em;
+  border: none;
+}
+
+img {
+  width: 4em;
+  height: 4em;
+  margin-left: 1em;
+}
+
+div {
+  display: flex;
+  margin-top: 1.5em;
+}
+button {
+  transition: 0.2s box-shadow;
+}
+button:hover {
+  box-shadow: 0.4em 0.4em 0.1em 0.1em lightgrey;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+footer {
+  height: 5vh;
+}
