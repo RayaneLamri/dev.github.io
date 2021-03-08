@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>App#3 Form</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav>
+        <a class="tab-anchor active" href="#">LogIn</a>
+        <a class="tab-anchor" href="#">SignIn</a>
+        <a class="tab-anchor" href="#">Remove</a>
+      </nav>
+      <section class="item item-login">
+        <input type="text" id="login-username" placeholder="Username" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <input
+          class="btn btn-log"
+          type="button"
+          value="Log"
+          onclick="myGet()"
+        />
+      </section>
+      <section class="item item-signin">
+        <input type="text" id="signin-username" placeholder="Username" />
+        <input
+          type="password"
+          id="signin-password"
+          placeholder="Password"
+          oninput="myParam(this)"
+        />
+        <input
+          type="password"
+          id="signin-confirmation"
+          placeholder="Confirmation"
+        />
+        <input
+          class="btn btn-sign"
+          type="button"
+          value="Sign"
+          onclick="mySet()"
+          href="#"
+        />
+        <div>
+          <p>x 1 minuscule</p>
+          <p>x 1 majuscule</p>
+          <p>x 1 chiffre</p>
+          <p>x 8 caractères</p>
+        </div>
+      </section>
+      <section class="item item-remove">
+        <input type="text" id="remove-username" placeholder="Username" />
+        <input
+          class="btn btn-remove"
+          type="button"
+          value="Remove"
+          onclick="myRemove()"
+        />
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
