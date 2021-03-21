@@ -1,100 +1,116 @@
 @import url("https://use.typekit.net/qhs6ngj.css");
 
-:root {
-  --black: #0b0a07;
-  --blue: #f8f8f8;
-  --white: #0050f5;
-}
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--white);
-  font-family: code-saver, sans-serif;
-  background-color: var(--blue);
 }
 
-.container {
-  display: grid;
+:root {
+  --blue: #0048f9;
+  --lightblue: #7190e0;
+  --white: #f8faff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  grid-template:
-    ". . ." 1em
-    ". header ." auto
-    ". nav ." auto
-    ". article ." 1fr
-    "footer footer footer" auto
-    / 7em 1fr 7em;
-  justify-items: center;
+  background-color: var(--blue);
+  font-family: code-saver, sans-serif;
+}
+
+#section--container {
+  flex: 0.85;
+  background-color: var(--white);
+  border-radius: 0 0 0 5em;
+  position: relative;
+  padding-left: 2.5em;
+  padding-top: 4em;
+}
+
+#section--menu {
+  flex: 0.15;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
 }
-nav {
+
+a {
+  text-decoration: none;
+  color: var(--lightblue);
+}
+
+#todo--add {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+}
+
+#todo--add > * {
+  background-color: var(--blue);
+  border-radius: 0.4em;
   display: flex;
   justify-content: center;
-  grid-area: nav;
-  font-size: 1.2em;
-  text-transform: capitalize;
-}
-a {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-nav a:hover {
-  font-weight: 900;
+  align-items: center;
+  /* box-shadow: 0 3px 12px rgb(150, 150, 150); */
 }
 
-h1 {
-  grid-area: header;
-  font-size: 2em;
+#todo--sort {
+  width: 2em;
+  height: 2em;
+  left: -2em;
+  top: -2em;
+  position: absolute;
 }
 
-h2 {
-  font-size: 3em;
-}
-hr {
-  border: 2px solid var(--white);
-}
-.article {
-  grid-area: article;
+#todo--plus {
+  width: 5em;
+  height: 5em;
 }
 
-footer {
-  grid-area: footer;
-}
-#cv {
-  color: var(--blue);
-  background-color: var(--white);
-}
-.button {
-  color: var(--blue);
-  background-color: var(--white);
-  font-size: 1.5em;
-  padding: 0.5em;
-  border: none;
+#todo--add i {
+  color: var(--white);
 }
 
-img {
-  width: 4em;
-  height: 4em;
-  margin-left: 1em;
+/* logo cirlce */
+
+#section--container > article {
+  background-color: var(--blue);
+  height: 10vh;
+  width: 80vw;
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: 1fr 0.4fr;
+  justify-items: center;
+  margin-bottom: 1em;
+  box-shadow: 1px 3px 12px gray;
 }
 
-div {
-  display: flex;
-  margin-top: 1.5em;
-}
-button {
-  transition: 0.2s box-shadow;
-}
-button:hover {
-  box-shadow: 0.4em 0.4em 0.1em 0.1em lightgrey;
+article > i:first-of-type {
+  color: var(--white);
+  padding-top: 0.4em;
+  padding-left: 0.4em;
 }
 
-p {
-  text-transform: uppercase;
+article > i:last-of-type {
+  color: var(--white);
+  padding-top: 0.4em;
+  padding-right: 0.4em;
+  color: lightgray;
 }
-
-footer {
-  height: 5vh;
+p:first-of-type {
+  color: var(--white);
+  align-self: center;
+  justify-self: flex-start;
+  padding-left: 2em;
+}
+p:last-of-type {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  justify-self: start;
+  color: var(--white);
+  font-size: 0.6em;
+  align-self: center;
 }
