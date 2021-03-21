@@ -1,0 +1,116 @@
+@import url("https://use.typekit.net/qhs6ngj.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #0048f9;
+  --lightblue: #7190e0;
+  --white: #f8faff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--blue);
+  font-family: code-saver, sans-serif;
+}
+
+#section--container {
+  flex: 0.85;
+  background-color: var(--white);
+  border-radius: 0 0 0 5em;
+  position: relative;
+  padding-left: 2.5em;
+  padding-top: 4em;
+}
+
+#section--menu {
+  flex: 0.15;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightblue);
+}
+
+#todo--add {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+}
+
+#todo--add > * {
+  background-color: var(--blue);
+  border-radius: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 3px 12px rgb(150, 150, 150); */
+}
+
+#todo--sort {
+  width: 2em;
+  height: 2em;
+  left: -2em;
+  top: -2em;
+  position: absolute;
+}
+
+#todo--plus {
+  width: 5em;
+  height: 5em;
+}
+
+#todo--add i {
+  color: var(--white);
+}
+
+/* logo cirlce */
+
+#section--container > article {
+  background-color: var(--blue);
+  height: 10vh;
+  width: 80vw;
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: 1fr 0.4fr;
+  justify-items: center;
+  margin-bottom: 1em;
+  box-shadow: 1px 3px 12px gray;
+}
+
+article > i:first-of-type {
+  color: var(--white);
+  padding-top: 0.4em;
+  padding-left: 0.4em;
+}
+
+article > i:last-of-type {
+  color: var(--white);
+  padding-top: 0.4em;
+  padding-right: 0.4em;
+  color: lightgray;
+}
+p:first-of-type {
+  color: var(--white);
+  align-self: center;
+  justify-self: flex-start;
+  padding-left: 2em;
+}
+p:last-of-type {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  justify-self: start;
+  color: var(--white);
+  font-size: 0.6em;
+  align-self: center;
+}
