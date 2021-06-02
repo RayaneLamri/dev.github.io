@@ -1,146 +1,166 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title></title>
 	<style type="text/css">
-	*, *:before, *:after{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-		body{
-			margin:  0;
+		*, *::before, *::after {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		main > * {
 			font-family: Arial, Helvetica, sans-serif;
 		}
-		header {
-			padding-left: 5em;
-			padding-right: 5em;
+		main * {
+			color: #eeeeee;
 		}
 		header, footer {
-			background-color: #4E4E4E;
+			justify-content: space-between;
+			padding-left: 5em;
+			padding-right: 5em;
+			background: #333333;
+			padding-top: .5em;
+			padding-bottom: .5em;
 		}
-		header *, footer * {
-			color: white;
-			display: inline-block;
+		header, footer, ul {
+			display: flex;
 		}
-		header li {
+		ul {
+			list-style: none;
+		}
+		li {
 			padding-right: 1em;
 		}
 		a {
 			text-decoration: none;
 		}
-		ul {
-			padding: 0;
+		.one {
+			text-align: center;
+			padding: 2em;
 		}
-		header p, footer p {
-			float: right;
+		h1 {
+			padding-top: 1em;
+			padding-bottom: 1em;
 		}
-		input[type="button"]{
-			color: white;
-			background-color: #E99002;
-			border-style: none;
-			border: 2px solid white;
-			color: white;
-			border-radius: .3em;
-			padding: 1em;
+		.three {
+			padding: 4em;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 		}
-		.article_blue {
-			background-color: #1E93CC;
-			color: white;
+		.three article {
+			margin: ;
 		}
-		.articles{
-			padding-left: 8em;
-			padding-right: 8em;
-			padding-top: 2em;
-			padding-bottom: 2em;
-		}
-		.articles section{
-			display: flex;
-		}
-		.database{
-
+		.two, .four, .five, .six {
 			text-align: center;
 		}
-		.database{
-			padding-top: 2em;
-			padding-bottom: 2em;
+		.one, .three {
+			background-color: #1E93CC;
 		}
-		.database > h1 {
+		.five {
+			background-color: #eeeeee;
+		}
+		h2, h4 {
+			color: #20123a;
+		}
+		h1, h2, h3, h4 {
+			font-weight: lighter;
+		}
+		.one input[type="button"]{
+			border: 2px solid white;
+			color: white;
+		}
+		h3 {
 			margin-bottom: 1em;
 		}
-		.gallery{
-			background-color: #EEEEEE;
+		.six {
+			padding: 3em;
+		}
+		input[type="button"] {
+			color: white;
+			background-color: #165882;
+			border-style: none;	
+			border-radius: .3em;
+			padding: 1em;
+			width: 12em;
+			font-size: 16px;
+		}
+		#bubble-main{
+			position: fixed;
+			right: 10px;
+			bottom: 10px;
 		}
 	</style>
 </head>
 <body>
-	<header>
-		<ul>
-			<li><a href="">Features</a></li>
-			<li><a href="">Docs</a></li>
-			<li><a href="">Blog</a></li>
-			<li><a href="">Templates</a></li>
-			<li><a href="">Pricing</a></li>
-			<li><a href="">Contact</a></li>
-			<li><a href="">Sign Up</a></li>
-		</ul>
-		<p>Log In</p>
-	</header>
-	<section class="article_blue database">
-		<h1>The Plug and Play Database</h1>
-		<input type="button" value="Start building NOW" id="btn-start">
-	</section>
-	<section>
-		<h2>For awesome projects with deadlines</h2>
-	</section>
-	<section class="article_blue articles">
-		<section>
+	<main>
+		<header>
+			<ul>
+				<li><a href="">Features</a></li>
+				<li><a href="">Docs</a></li>
+				<li><a href="">Blog</a></li>
+				<li><a href="">Templates</a></li>
+				<li><a href="">Pricing</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">Sign Up</a></li>
+			</ul>
+			<p>Log In</p>
+		</header>
+		<section class="one">
+			<img src="../Documents/logo_transparent.png" width="160" height="160">
+			<h1>The Plug and Play Database</h1>
+			<input type="button" value="Start building NOW" id="btn-start" style="background-color:#e99002">
+		</section>
+		<section class="two">
+			<h2>For awesome projects with deadlines</h2>
+		</section>
+		<section class="three">
 			<article>
-			<h3>Simple to use</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		</article>
-		<article>
-			<h3>Productive</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</article>
+				<h3>Simple to use</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</article>
+			<article>
+				<h3>Productive</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</article>
+			<article>
+				<h3>Productive</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+			</article>
+			<article>
+				<h3>Productive</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</article>
 		</section>
-		<section>
-		<article>
-			<h3>Productive</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-		</article>
-		<article>
-			<h3>Productive</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</article>
+		<section class="four">
+			<h4>Innovative teams gets more done with turlututu.com</h4>
 		</section>
-	</section>
-	<section>
-		<h4>Innovative teams gets more done with turlututu.com</h4>
-	</section>
-	<section class="gallery">
-		<img src="logo_transparent.png" width="160" height="160">
-		<img src="logo_transparent.png" width="160" height="160">
-		<img src="logo_transparent.png" width="160" height="160">
-		<img src="logo_transparent.png" width="160" height="160">
-		<img src="logo_transparent.png" width="160" height="160">
-		<img src="logo_transparent.png" width="160" height="160">
-		<img src="logo_transparent.png" width="160" height="160">
-	</section>
-	<section class="three-btn">
-		<input type="button" value="REST API">
-		<input type="button" value="Docs">
-		<input type="button" value="Start" class="btn-building">
-	</section>
-	<footer>
-		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">About</a></li>
-			<li><a href="">Contact</a></li>
-			<li><a href="">Terms & Conditions</a></li>
-			<li><a href="">Privacy Policy</a></li>
-		</ul>
-		<p>&copy; 2017 turlututu</p>
-	</footer>
+		<section class="five">
+			<img src="../Documents/logo_transparent.png" width="160" height="160">
+			<img src="../Documents/logo_transparent.png" width="160" height="160">
+			<img src="../Documents/logo_transparent.png" width="160" height="160">
+			<img src="../Documents/logo_transparent.png" width="160" height="160">
+			<img src="../Documents/logo_transparent.png" width="160" height="160">
+			<img src="../Documents/logo_transparent.png" width="160" height="160"><br>
+			<img src="../Documents/logo_transparent.png" width="160" height="160">
+		</section>
+		<section class="six">
+			<input type="button" value="REST API">
+			<input type="button" value="Docs">
+			<input type="button" value="Start" class="btn-building" style="background-color:#e99002">
+		</section>
+		<footer>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">Terms & Conditions</a></li>
+				<li><a href="">Privacy Policy</a></li>
+			</ul>
+			<p>&copy; 2017 turlututu</p>
+			<img id="bubble-main" src="bubble.png" height="40px" width="60px">
+		</footer>
+		
+	</main>
 </body>
 </html>
